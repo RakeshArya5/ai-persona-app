@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Resume</title>
+</head>
+<body>
+    <h2>Upload Your Resume</h2>
+    <form method="POST" action="/process-resume" enctype="multipart/form-data">
+        <input type="file" name="resume_file" accept=".pdf,.docx" required>
+        <button type="submit">Upload</button>
+    </form>
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

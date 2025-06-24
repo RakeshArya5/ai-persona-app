@@ -1,0 +1,32 @@
+{
+    "abc123": {
+        "status": "used",
+        "student_name": "Akshita",
+        "issued_on": "2025-06-24"
+    },
+    "xyz456": {
+        "status": "used",
+        "student_name": "Ravi",
+        "issued_on": "2025-06-20"
+    },
+    "7w899r": {
+        "status": "unused",
+        "student_name": "rr",
+        "issued_on": "2025-06-24"
+    },
+    "o52qzt": {
+        "status": "unused",
+        "student_name": "Rishi",
+        "issued_on": "2025-06-24"
+    },
+    "1mlpme": {
+        "status": "unused",
+        "student_name": "amar'",
+        "issued_on": "2025-06-24"
+    },
+    "bcei7z": {
+        "status": "used",
+        "student_name": "Amit",
+        "issued_on": "2025-06-24"
+    }
+}

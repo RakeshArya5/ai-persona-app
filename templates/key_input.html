@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Access Key</title>
+</head>
+<body>
+    <h2>Mentorship Access</h2>
+    <form method="POST" action="/validate-key">
+        <label>Enter your one-time key:</label><br>
+        <input type="text" name="access_key" required>
+        <button type="submit">Continue</button>
+    </form>
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
