@@ -17,25 +17,44 @@ PERSONAS = """
 
 def build_prompt(resume_text):
     return f"""
-You are an AI career consultant helping learners identify their AI path based on their resume.
+You are an AI career consultant. Based on the following resume:
 
-Here are the 6 possible personas:
-{PERSONAS}
+1. Identify the best-fit persona from the following 6 types:
+- The Aspiring AI Engineer
+- The Non-Tech Explorer
+- The Tech Shifter
+- The Domain Climber
+- The AI Side-Hustler
+- The Academic Seeker
 
-Based on the following resume, do the following:
-1. Identify which one of the 6 personas best fits the individual.
-2. Generate a structured profile report with these sections:
-   - Summary of background
-   - Key strengths
-   - Realistic AI opportunities they can aim for
-   - What they should focus on next
-   - Final note to motivate and direct them
+2. Output in this exact format:
+
+<strong class='persona-heading'>The Tech Shifter</strong>
+
+<strong>Summary of Background</strong>  
+<paragraph>
+
+<strong>Key Strengths</strong>  
+<paragraph>
+
+<strong>Realistic AI Opportunities They Can Aim For</strong>  
+<paragraph>
+
+<strong>What They Should Focus on Next</strong>  
+<paragraph>
+
+<strong>Final Note</strong>  
+<paragraph>
+
+Only output clean HTML-ready content — no numbers, no markdown, no bullet points. Just the persona name first, then the sections.
 
 Resume:
 \"\"\"
 {resume_text}
 \"\"\"
 """
+
+
 
 def get_persona_profile(resume_text):
     prompt = build_prompt(resume_text)

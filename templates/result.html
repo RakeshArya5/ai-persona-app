@@ -1,10 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Persona Profile</title>
+    <title>AI Mentorship Hub - Career Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .heading {
+            color: #2980b9;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #2c3e50;
+        }
+
+        .persona {
+            font-size: 18px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            white-space: pre-wrap;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .download-button {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+    </style>
 </head>
 <body>
-    <h2>Your AI Career Profile</h2>
-    <pre style="white-space: pre-wrap;">{{ output }}</pre>
+    <div class="container" id="report">
+        <img src="{{ url_for('static', filename='Final Logo.png') }}" alt="AI Mentorship Hub" class="logo">
+        <div class="heading">AI Mentorship Hub - Personalized Career Report</div>
+        
+        <style>
+            .content {
+                white-space: pre-wrap;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .content strong {
+                font-weight: bold;
+                color: #2c3e50;
+            }
+        </style>
+
+
+        <div class="content">
+            {{ output|safe }}
+        </div>
+
+        <!-- <div class="button-container">
+            <form method="POST" action="/download-pdf">
+                <input type="hidden" name="output" value="{{ output|tojson }}">
+                <button type="submit" class="download-button">Download as PDF</button>
+            </form>
+        </div> -->
+        <p style="margin-top: 30px; font-style: italic; color: #999;">
+             PDF download is currently disabled. You will receive a copy during the live mentorship session.
+        </p>
+
+    </div>
 </body>
 </html>
